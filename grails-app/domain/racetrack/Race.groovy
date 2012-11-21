@@ -10,5 +10,11 @@ class Race {
     Integer maxRunners = 100000
 
     static constraints = {
+        name()
+        cost()
+        city()
+        startDate()
+        distance()
+        maxRunners()
     }
 }
