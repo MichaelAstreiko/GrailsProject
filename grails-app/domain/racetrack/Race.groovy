@@ -10,11 +10,13 @@ class Race {
     Integer maxRunners = 100000
 
     static constraints = {
-        name()
+        name(blank: false, maxSize: 50)
         cost()
         city()
-        startDate()
-        distance()
-        maxRunners()
+        startDate(validator: {
+            return (it > new Date())
+        })
+        distance(min: 0.0)
+        maxRunners(min: 0, max: 100500)
     }
 }
