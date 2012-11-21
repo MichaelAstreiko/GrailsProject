@@ -1,6 +1,9 @@
 package racetrack
 
 class RaceController {
+    def scaffold = Race
 
-    def index = { }
+    def index = {
+        render "Hello World from baxxabit"
+    }
 }
