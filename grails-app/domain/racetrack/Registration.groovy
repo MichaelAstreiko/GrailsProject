@@ -10,14 +10,21 @@ class Registration {
     String zipcode
     String email
     Date dateCreated
+    Boolean paid
 
     static constraints = {
+        race()
+        runner()
+        paid()
+        dateCreated()
+
     }
 
-    static belongsTo = [race: Race]
+    static belongsTo = [race: Race, runner: Runner]
 
     @Override
     String toString() {
         return "${email}, ${city}"
     }
+
 }
