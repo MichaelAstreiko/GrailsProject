@@ -16,6 +16,6 @@ class Registration {
 
     @Override
     String toString() {
-        return "${runner.firstName}, ${runner.lastName}"
+        return "${race.name}, ${runner.lastName}"
     }
 }
