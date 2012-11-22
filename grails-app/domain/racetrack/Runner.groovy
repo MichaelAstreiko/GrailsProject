@@ -27,6 +27,6 @@ class Runner {
 
     @Override
     String toString() {
-        return "${lastName}, ${firstName} (${email})"
+        "${lastName}, ${firstName} (${email})"
     }
 }

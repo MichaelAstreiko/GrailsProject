@@ -23,10 +23,10 @@ class Race {
 
     @Override
     String toString() {
-        return "${name}, ${startDate.format('MM/dd/yyyy')}"
+        "${name}, ${startDate.format('MM/dd/yyyy')}"
     }
 
     BigDecimal inMiles() {
-        return distance * 0.6214
+        distance * 0.6214
     }
 }
