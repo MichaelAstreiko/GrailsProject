@@ -19,9 +19,21 @@ class UserController {
         return [userInstance: userInstance]
     }
 
+    def show = {
+        def userInstance = User.get(params.id)
+        if (!userInstance) {
+            flash.message = "${
+                message(code: 'default.not.found.message',
+                        args: [message(code: 'user.label', default: 'User'), params.id]
+                )
+            }"
+        } else {
+            [userInstance: userInstance]
+        }
+    }
+
 
     def save = {}
-    def show = {}
     def edit = {}
     def update = {}
     def delete = {}
