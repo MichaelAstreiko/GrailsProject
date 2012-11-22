@@ -8,7 +8,8 @@ class UserController {
     }
 
     def list = {
-        params.max = Math.min(params.max ? params.int('max') : 10, 100)[userInstance: User.list(params), userInstanceTotal: User.count()]
+        params.max = Math.min(params.max ? params.int('max') : 10, 100)[userInstanceList: User.list(params),
+                userInstanceTotal: User.count()]
     }
 
     def create = {
