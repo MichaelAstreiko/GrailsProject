@@ -19,6 +19,12 @@ class Race {
         distance(min: 0.0)
         maxRunners(min: 0, max: 100500)
     }
+    static hasMany = [registrations: Registration]
+
+    @Override
+    String toString() {
+        return "${name}, ${startDate.format('MM/dd/yyyy')}"
+    }
 
     BigDecimal inMiles() {
         return distance * 0.6214

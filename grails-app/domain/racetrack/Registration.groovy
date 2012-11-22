@@ -13,4 +13,11 @@ class Registration {
 
     static constraints = {
     }
+
+    static belongsTo = [race: Race]
+
+    @Override
+    String toString() {
+        return "${email}, ${city}"
+    }
 }
