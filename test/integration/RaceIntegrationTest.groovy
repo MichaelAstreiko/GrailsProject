@@ -14,7 +14,7 @@ class RaceIntegrationTest extends GroovyTestCase {
         println "\nErrors:"
         println race.errors ?: "no errors found"
 
-        def badField = race.errors.getFieldError("startDate")
+        def badField = race.errors.getFieldError('startDate')
         println "\nBadField : "
         println badField ?: "startDate wasn't a bad field"
         assertNotNull "Expecting to find an error on the startDate field", badField
