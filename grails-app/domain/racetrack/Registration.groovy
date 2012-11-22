@@ -1,14 +1,6 @@
 package racetrack
 
 class Registration {
-    String name
-    Date dateOfBirth
-    String gender
-    String address
-    String city
-    String state
-    String zipcode
-    String email
     Date dateCreated
     Boolean paid
 
@@ -24,7 +16,6 @@ class Registration {
 
     @Override
     String toString() {
-        return "${email}, ${city}"
+        return "${runner.firstName}, ${runner.lastName}"
     }
-
 }
