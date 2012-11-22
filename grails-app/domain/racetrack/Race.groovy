@@ -19,4 +19,8 @@ class Race {
         distance(min: 0.0)
         maxRunners(min: 0, max: 100500)
     }
+
+    BigDecimal inMiles() {
+        return distance * 0.6214
+    }
 }

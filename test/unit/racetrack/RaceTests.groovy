@@ -11,7 +11,8 @@ class RaceTests extends GrailsUnitTestCase {
         super.tearDown()
     }
 
-    void testSomething() {
-
+    void testInMiles() {
+        def race = new Race(distance: 5.0)
+        assertEquals 3.108, race.inMiles()
     }
 }
