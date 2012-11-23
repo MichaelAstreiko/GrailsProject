@@ -304,6 +304,7 @@ th.desc a {
     background: #48802c;
     padding: 2em, 1em, 2em, 1em;
     margin-bottom: 1em;
+    height: 75px;
 }
 
 a.header-main:link, a.header-main:visited {
@@ -326,4 +327,14 @@ a.header-main:link, a.header-main:visited {
     margin-bottom: 1em;
     margin-top: 1em;
     clear: both;
+}
+
+#loginHeader {
+    float: right;
+    color: #fff;
+    font-size: 1.25em;
+}
+
+#loginHeader a {
+    color: #fff;
 }
