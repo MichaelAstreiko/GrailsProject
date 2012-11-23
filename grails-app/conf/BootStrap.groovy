@@ -1,6 +1,7 @@
 import racetrack.Runner
 import racetrack.Race
 import racetrack.Registration
+import racetrack.User
 
 class BootStrap {
 
@@ -44,6 +45,19 @@ class BootStrap {
 //        if (registration.hasErrors()) {
 //            println registration.errors
 //        }
+
+        def admin = new User(login: "admin", password: "admin", role: "admin")
+        admin.save()
+        if (admin.hasErrors()) {
+            println admin.errors
+        }
+
+        User jdoe = new User(login: "jdoe", password: "jdoe", role: "user")
+        jdoe.save()
+        if (jdoe.hasErrors()) {
+            println jdoe.errors
+        }
+
     }
     def destroy = {
     }
