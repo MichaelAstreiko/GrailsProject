@@ -11,6 +11,12 @@ class User {
         role(inList: ["admin", "user"])
     }
 
+    static transients = ['admin']
+
+    boolean isAdmin() {
+        role == "admin"
+    }
+
     @Override
     String toString() {
         login
