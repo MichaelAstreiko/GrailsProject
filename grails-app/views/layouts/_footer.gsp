@@ -1,4 +1,4 @@
 <div id="footer">
   <hr />
-  &copy; 2012 Racetrack, Inc.
+  <g:copyright startYear="2005">Racetrack, Inc.</g:copyright>
 </div>
