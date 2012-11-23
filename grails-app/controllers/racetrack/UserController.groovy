@@ -28,6 +28,12 @@ class UserController {
         }
     }
 
+    def beforeInterceptor = [action: this.&debug]
+
+    def debug() {
+        println("DEBUGL ${actionUri} called.")
+        println "DEBUG: ${params}"
+    }
 
     def save = {}
     def edit = {}
