@@ -30,11 +30,6 @@ class UserController {
 
     def beforeInterceptor = [action: this.&debug]
 
-    def debug() {
-        println("DEBUGL ${actionUri} called.")
-        println "DEBUG: ${params}"
-    }
-
     def save = {}
     def edit = {}
     def update = {}
@@ -47,7 +42,7 @@ class UserController {
 
     }
     def authenticate = {
-        def user = User.findByLoginAndPassword(params.login, params.password.encodeAsSHA())
+        def user = User.findByLoginAndPassword(params.login, params.password?.encodeAsSHA())
         if (user) {
             session.user = user
             flash.message = "Hello ${user.login}!".toString().encodeAsUnderscore()
